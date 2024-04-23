@@ -54,10 +54,7 @@ Before you begin, ensure that you have the following installed:
    - Inside the container, create tables for the database:
      sql
      ![Alt Text](https://raw.githubusercontent.com/DhanviBhimani/DhanviBhimani.github.io/master/images/img7.png)
-     USE school;
-     CREATE TABLE student (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(40), roll_number INT, class VARCHAR(16));
-     CREATE TABLE teacher (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(40), subject VARCHAR(40), class VARCHAR(16));
-     
+  
      ![Alt Text](https://raw.githubusercontent.com/DhanviBhimani/DhanviBhimani.github.io/master/images/img8.png)
 2. Backend Application:
 
