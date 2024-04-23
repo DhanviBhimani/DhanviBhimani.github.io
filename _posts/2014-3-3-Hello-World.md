@@ -23,14 +23,14 @@ Before you begin, ensure that you have the following installed:
 ## Dockerfile(Backend)
 ![Alt Text](https://raw.githubusercontent.com/DhanviBhimani/DhanviBhimani.github.io/master/images/backend.png)
 ## Dockerfile(Frontend)
-![Alt Text](https://raw.githubusercontent.com/Being-Reprobate/being-reprobate.github.io/blob/master/images/frontend%20dockerfile.png)
+![Alt Text](https://raw.githubusercontent.com/DhanviBhimani/DhanviBhimani.github.io/master/images/frontend.png)
 ## Deployment Steps
 0. Create Network
    - Navigate to the project directory
    - bash
      docker network create my-network
      
-     ![Alt Text](https://raw.githubusercontent.com/Being-Reprobate/being-reprobate.github.io/blob/master/images/network%20create%20.png)
+     ![Alt Text](https://raw.githubusercontent.com/DhanviBhimani/DhanviBhimani.github.io/master/images/img3.png)
 1. MySQL Database:
 
    - Navigate to the mysql directory.
@@ -39,27 +39,26 @@ Before you begin, ensure that you have the following installed:
      docker build -t mysql-image .
      
      
-     ![Alt Text](https://raw.githubusercontent.com/Being-Reprobate/being-reprobate.github.io/blob/master/images/database%20image%20build1.png)
-     ![Alt Text](https://raw.githubusercontent.com/Being-Reprobate/being-reprobate.github.io/blob/master/images/database%20image%20build2.png)
+     ![Alt Text](https://raw.githubusercontent.com/DhanviBhimani/DhanviBhimani.github.io/master/images/img1.png)
 
      
    - Run the MySQL container:
      bash
      docker run --name mysql-container --network=three-tier-network -p 3306:3306 -v mysql-data:/var/lib/mysql -d mysql-image
      
-     ![Alt Text](https://raw.githubusercontent.com/Being-Reprobate/being-reprobate.github.io/blob/master/images/database%20container%20creation.png)
+     ![Alt Text](https://raw.githubusercontent.com/DhanviBhimani/DhanviBhimani.github.io/master/images/img4.png)
    - Access the MySQL container:
      bash
      docker exec -it mysql-container /bin/bash
      
    - Inside the container, create tables for the database:
      sql
-     ![Alt Text](https://raw.githubusercontent.com/chitt31/chitt31.github.io/master/images/24.PNG)
+     ![Alt Text](https://raw.githubusercontent.com/DhanviBhimani/DhanviBhimani.github.io/master/images/img7.png)
      USE school;
      CREATE TABLE student (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(40), roll_number INT, class VARCHAR(16));
      CREATE TABLE teacher (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(40), subject VARCHAR(40), class VARCHAR(16));
      
-     ![Alt Text](https://raw.githubusercontent.com/chitt31/chitt31.github.io/master/images/25.PNG)
+     ![Alt Text](https://raw.githubusercontent.com/DhanviBhimani/DhanviBhimani.github.io/master/images/img8.png)
 2. Backend Application:
 
    - Navigate to the backend directory.
@@ -67,12 +66,12 @@ Before you begin, ensure that you have the following installed:
      bash
      docker build -t backend .
      
-     ![Alt Text](https://raw.githubusercontent.com/chitt31/chitt31.github.io/master/images/26.PNG)
+     ![Alt Text](https://raw.githubusercontent.com/DhanviBhimani/DhanviBhimani.github.io/master/images/img9.png)
    - Run the backend container:
      bash
      docker run -d -p 3500:3500 --name backend-container --network=three-tier-network backend
      
-     ![Alt Text](https://raw.githubusercontent.com/chitt31/chitt31.github.io/master/images/27.PNG)
+     ![Alt Text](https://raw.githubusercontent.com/DhanviBhimani/DhanviBhimani.github.io/master/images/img10.png)
 3. Frontend Application:
 
    - Navigate to the frontend directory.
@@ -80,16 +79,16 @@ Before you begin, ensure that you have the following installed:
      bash
      docker build -t frontend .
      
-     ![Alt Text](https://raw.githubusercontent.com/chitt31/chitt31.github.io/master/images/28.PNG)
+     ![Alt Text](https://raw.githubusercontent.com/DhanviBhimani/DhanviBhimani.github.io/master/images/img11.png)
    - Run the frontend container:
      bash
      docker run -d --name frontend-container --network=three-tier-network -p 80:80 frontend
      
-     ![Alt Text](https://raw.githubusercontent.com/chitt31/chitt31.github.io/master/images/29.PNG)
+     ![Alt Text](https://raw.githubusercontent.com/DhanviBhimani/DhanviBhimani.github.io/master/images/img12.png)
 4. Access the Application:
 
    Open your favorite browser and visit [http://localhost:80](http://localhost:80). Enjoy exploring the MERN stack application!
-   ![Alt Text](images/img16.png)
+   ![Alt Text](https://raw.githubusercontent.com/DhanviBhimani/DhanviBhimani.github.io/master/images/img16.png)
 
     
 ## Data Persistence
