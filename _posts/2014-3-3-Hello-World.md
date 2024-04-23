@@ -21,7 +21,7 @@ Before you begin, ensure that you have the following installed:
 
 
 ## Dockerfile(Backend)
-![Alt Text](https://raw.githubusercontent.com/Being-Reprobate/being-reprobate.github.io/blob/master/images/backend%20dockerfile.png)
+![Alt Text](https://raw.githubusercontent.com/DhanviBhimani/DhanviBhimani.github.io/master/images/backend.png)
 ## Dockerfile(Frontend)
 ![Alt Text](https://raw.githubusercontent.com/Being-Reprobate/being-reprobate.github.io/blob/master/images/frontend%20dockerfile.png)
 ## Deployment Steps
